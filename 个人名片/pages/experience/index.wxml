@@ -1,0 +1,34 @@
+<view class="container">
+
+    <view class="list-page">
+      <swiper 
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" 
+        interval="{{interval}}" 
+        circular="{{circular}}"
+        duration="{{duration}}">
+        <block wx:for="{{workds}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item" >
+                <view class="up-section"></view>
+                <view class="down-section"></view>
+                <view class="card-section">
+                   <view class="title">
+                         <text class="title">{{item.title}}</text>
+                   </view>
+                   <view class="works-logo">
+                      <image src="../../res/icon/logo.png"></image>
+                   </view>
+                   <view class="works-title">{{item.subtitle}}</view>
+                   <view class="works-list">
+                      <view wx:for="{{item.skills}}" wx:for-item="i">{{i}}</view>
+                   </view>
+                </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+
+</view>
